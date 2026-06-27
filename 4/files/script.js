@@ -1,4 +1,4 @@
-const GAS_URL = "https://script.google.com/macros/s/AKfycbyvYE966nuNejOmcYRoBbvp8OLY4cfKsL-oM5BU34KVUC_zdwHCVK00TI7T7qR6Ktye/exec";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbwEXoKEBLxbcJmdz0MkJXhTYr1uyZYUDge7mJO_QHa0HB0I5Q6Mu6S7ud2VP-OM_ynEFQ/exec";
 
 document.getElementById("suggestionForm").addEventListener("submit", function(e){
 
