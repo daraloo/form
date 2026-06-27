@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>فرم انتقاد و پیشنهاد | واحد تربیت بدنی مجتمع مس درآلو</title>
+
+    <meta name="theme-color" content="#0f5132">
+
+    <!-- Vazirmatn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="files/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="header">
+
+<div class="logo-box">
+
+<!-- لوگو را در پوشه images قرار دهید -->
+
+<img src="files/images/logo.png"
+alt="مجتمع مس درآلو"
+class="logo">
+
+</div>
+
+<div class="title-box">
+
+<h1>
+
+سامانه انتقاد، پیشنهاد و نظرسنجی
+
+</h1>
+
+<h2>
+
+واحد تربیت بدنی مجتمع مس درآلو
+
+</h2>
+
+</div>
+
+<button id="themeBtn"
+title="تغییر حالت">
+
+🌙
+
+</button>
+
+</header>
+
+<div class="notice">
+
+هدف از این سامانه، ارتقای کیفیت خدمات ورزشی مجتمع از طریق دریافت نظرات ارزشمند کارکنان است.
+
+</div>
+
+<form id="suggestionForm">
+
+<!-- ضد اسپم -->
+
+<input
+type="text"
+id="website"
+name="website"
+autocomplete="off"
+tabindex="-1"
+class="honeypot">
+
+
+
+<div class="row">
+
+
+<div class="field">
+
+<label>
+
+نوع پیام
+
+</label>
+
+<select id="type" required>
+
+<option value="">
+
+انتخاب کنید
+
+</option>
+
+<option>
+
+انتقاد
+
+</option>
+
+<option>
+
+پیشنهاد
+
+</option>
+
+<option>
+
+تقدیر
+
+</option>
+
+<option>
+
+گزارش مشکل
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="field">
+
+<label>
+
+موضوع
+
+</label>
+
+<select id="subject" required>
+
+<option value="">
+
+انتخاب کنید
+
+</option>
+
+<option>
+
+تجهیزات ورزشی
+
+</option>
+
+<option>
+
+سالن ورزشی
+
+</option>
+
+<option>
+
+مربیان
+
+</option>
+
+<option>
+
+رفتار کارکنان
+
+</option>
+
+<option>
+
+نظافت
+
+</option>
+
+<option>
+
+برنامه های ورزشی
+
+</option>
+
+<option>
+
+زمان بندی
+
+</option>
+
+<option>
+
+سایر
+
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>
+
+شرح موضوع
+
+</label>
+
+<textarea
+
+id="description"
+
+rows="6"
+
+maxlength="3000"
+
+required
+
+></textarea>
+
+</div>
+
+<div class="field">
+
+<label>
+
+پیشنهاد برای بهبود
+
+</label>
+
+<textarea
+
+id="suggestion"
+
+rows="5"
+
+maxlength="3000"
+
+></textarea>
+
+</div>
+
+<div class="field">
+
+<label>
+
+میزان رضایت
+
+</label>
+
+<div class="stars">
+
+<label><input type="radio" name="rate" value="5">⭐⭐⭐⭐⭐</label>
+
+<label><input type="radio" name="rate" value="4">⭐⭐⭐⭐</label>
+
+<label><input type="radio" name="rate" value="3">⭐⭐⭐</label>
+
+<label><input type="radio" name="rate" value="2">⭐⭐</label>
+
+<label><input type="radio" name="rate" value="1">⭐</label>
+
+</div>
+
+</div>
+
+<div class="field">
+
+<label>
+
+تمایل به دریافت پاسخ
+
+</label>
+
+<select id="needAnswer">
+
+<option>
+
+خیر
+
+</option>
+
+<option>
+
+بله
+
+</option>
+
+</select>
+
+</div>
+
+<div class="actions">
+
+<button
+type="submit"
+id="sendBtn">
+
+ثبت اطلاعات
+
+</button>
+
+<button
+type="reset">
+
+پاک کردن
+
+</button>
+
+</div>
+
+</form>
+
+<div id="loading"
+class="loading">
+
+در حال ارسال...
+
+</div>
+
+<div id="successBox"
+class="success">
+
+<h2>
+
+✅
+
+</h2>
+
+<p>
+
+نظر شما با موفقیت ثبت شد.
+
+از همکاری شما سپاسگزاریم.
+
+</p>
+
+</div>
+
+<footer>
+
+<hr>
+
+<p>
+
+واحد تربیت بدنی مجتمع مس درآلو
+
+</p>
+
+<p>
+
+تمامی اطلاعات محرمانه بوده و صرفاً جهت بهبود خدمات استفاده خواهد شد.
+
+</p>
+
+<div id="qrcode"></div>
+
+</footer>
+
+</div>
+
+
+<!-- QRCode -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script src="files/script.js"></script>
+
+</body>
+
+</html>

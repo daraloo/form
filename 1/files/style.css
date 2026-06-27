@@ -1,0 +1,498 @@
+/* ===================================================
+   Suggest & Criticism Form
+   Sport Department - Daraloo Copper Complex
+   style.css
+=================================================== */
+
+:root{
+
+    --primary:#ff8a00;
+    --primary-dark:#e06f00;
+    --secondary:#ffb347;
+    --background:#fff7ef;
+    --card:rgba(255,255,255,.45);
+    --text:#222;
+    --border:#d9d9d9;
+    --shadow:0 8px 25px rgba(0,0,0,.12);
+    --radius:18px;
+
+}
+
+body.dark{
+
+    --background:#151515;
+    --card:#222;
+    --text:#efefef;
+    --border:#444;
+    --primary:#1b8b55;
+    --primary-dark:#0f5132;
+    --secondary:#e0a84f;
+    --shadow:0 8px 25px rgba(0,0,0,.45);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Vazirmatn',sans-serif;
+    background:var(--background);
+    color:var(--text);
+    transition:.3s;
+
+}
+
+.container{
+
+    width:min(900px,95%);
+    margin:auto;
+    padding:30px 15px;
+
+}
+
+.header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:var(--card);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:var(--radius);
+
+    padding:20px;
+
+    box-shadow:0 12px 35px rgba(255,138,0,.18), inset 0 1px 0 rgba(255,255,255,.4);
+
+    margin-bottom:25px;
+
+}
+
+.logo{
+
+    width:90px;
+    height:90px;
+    object-fit:contain;
+
+}
+
+.title-box{
+
+    flex:1;
+    text-align:center;
+
+}
+
+.title-box h1{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.title-box h2{
+
+    color:var(--secondary);
+
+    font-size:18px;
+
+    font-weight:500;
+
+}
+
+#themeBtn{
+
+    width:52px;
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+#themeBtn:hover{
+
+    transform:rotate(180deg);
+
+}
+
+.notice{
+
+    background:#fff8dc;
+
+    border-right:6px solid var(--secondary);
+
+    padding:18px;
+
+    margin-bottom:25px;
+
+    border-radius:12px;
+
+    line-height:2;
+
+    box-shadow:0 12px 35px rgba(255,138,0,.18), inset 0 1px 0 rgba(255,255,255,.4);
+
+}
+
+body.dark .notice{
+
+    background:#35311d;
+
+}
+
+form{
+
+    background:var(--card);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.35);
+
+    padding:30px;
+
+    border-radius:var(--radius);
+
+    box-shadow:0 12px 35px rgba(255,138,0,.18), inset 0 1px 0 rgba(255,255,255,.4);
+
+}
+
+.row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+}
+
+.field{
+
+    margin-bottom:22px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-family:inherit;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    border-color:var(--primary);
+
+    outline:none;
+
+    box-shadow:0 0 8px rgba(15,81,50,.25);
+
+}
+
+.stars{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.stars label{
+
+    cursor:pointer;
+
+    font-size:20px;
+
+}
+
+.actions{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+.actions button{
+
+    flex:1;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+#sendBtn{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+#sendBtn:hover{
+
+    background:var(--primary-dark);
+
+}
+
+button[type=reset]{
+
+    background:#999;
+
+    color:white;
+
+}
+
+button[type=reset]:hover{
+
+    background:#666;
+
+}
+
+.loading{
+
+    display:none;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    color:var(--primary);
+
+}
+
+.success{
+
+    display:none;
+
+    margin-top:25px;
+
+    background:#e9ffe8;
+
+    border:2px solid #4caf50;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.success h2{
+
+    font-size:45px;
+
+    margin-bottom:10px;
+
+}
+
+body.dark .success{
+
+    background:#18361b;
+
+}
+
+footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:#777;
+
+}
+
+footer hr{
+
+    margin-bottom:18px;
+
+}
+
+#qrcode{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.honeypot{
+
+    display:none !important;
+
+}
+
+.fadeIn{
+
+    animation:fade .5s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+.row{
+
+    grid-template-columns:1fr;
+
+}
+
+.header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.logo{
+
+    width:70px;
+
+    height:70px;
+
+}
+
+.title-box h1{
+
+    font-size:22px;
+
+}
+
+.title-box h2{
+
+    font-size:16px;
+
+}
+
+.actions{
+
+    flex-direction:column;
+
+}
+
+}
+
+/* Glass + Soft UI enhancements */
+body{
+background:
+radial-gradient(circle at top left,#ffd7a1 0,#fff7ef 40%,#ffe9d1 100%);
+}
+input,textarea,select{
+background:rgba(255,255,255,.35);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.45);
+box-shadow: inset 4px 4px 8px rgba(220,220,220,.45), inset -4px -4px 8px rgba(255,255,255,.7);
+}
+.actions button,#themeBtn{
+box-shadow:0 8px 20px rgba(255,138,0,.25);
+}
